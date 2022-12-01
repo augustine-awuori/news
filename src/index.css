@@ -1,13 +1,103 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-radius: 30px;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --color-light: #f8f4f4;
+}
+
+/* Input Group */
+.input-group {
+  align-items: center;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px 1px var(--color-body);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.search-input {
+  border: 0;
+  color: var(--color-body);
+  flex: 1;
+  padding: 0.5rem;
+  outline: 0;
+}
+
+/* Media Query */
+.media-query {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.media-query__name {
+  color: var(--color-body-darker);
+  font-weight: 700;
+}
+
+.media-query__image {
+  border-radius: 1.25rem;
+  height: 2.5rem;
+  margin: 0 0.5rem;
+  width: 2.5rem;
+}
+
+/* Icons */
+.icon {
+  color: var(--color-body);
+}
+
+/* Page Controller */
+.page-controller {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-controller__separator {
+  align-self: center;
+  color: var(--color-body);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* NavBar */
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.navbar .input-group {
+  width: 50%;
+}
+
+.navbar .page-controller {
+  align-self: center;
 }
