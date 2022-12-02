@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import Widget from "./Widget";
 
 const days = [
@@ -11,6 +12,21 @@ const days = [
   "Sunday",
 ];
 
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const date = new Date();
 
 export default function TimeWidget() {
@@ -19,28 +35,34 @@ export default function TimeWidget() {
   const [seconds, setSeconds] = useState(date.getSeconds());
 
   useEffect(() => {
-    setInterval(() => {
-      setSeconds(date.getSeconds());
-    }, 1000);
-    setInterval(() => {
-      setHours(date.getHours());
-    }, 60000 * 60);
-    setInterval(() => {
-      setMinutes(date.getMinutes());
-    }, 60000);
-
+    updateTime();
     return () => clearInterval();
   }, []);
 
+  const HALF_MINUTE = 30000;
+
+  const updateTime = () => {
+    const hrs = date.getHours();
+    const mins = date.getMinutes();
+
+    setInterval(() => {
+      setSeconds(date.getSeconds());
+      if (hours !== hrs) setHours(hrs);
+      if (minutes !== mins) setMinutes(mins);
+    }, HALF_MINUTE);
+  };
+
   return (
     <Widget heading="Tid">
-      <p className="widget__big-element">{hours}:</p>
-      <p className="widget__big-element">{minutes}:</p>
-      <p className="widget__big-element">{seconds}</p>
+      <section className="widget__time">
+        <p className="widget__big-element">{hours}:</p>
+        <p className="widget__big-element">{minutes}:</p>
+        <p className="widget__big-element">{seconds}</p>
+      </section>
       <section className="widget__dates">
-        <p>{days[date.getDay() - 1]} </p>
-        <p>{date.getMonth()} </p>
-        <p>{date.getFullYear()}</p>
+        <p className="widget__date">{days[date.getDay() - 1]}, </p>
+        <p className="widget__date">{months[date.getMonth()]} </p>
+        <p className="widget__date">{date.getFullYear()}</p>
       </section>
     </Widget>
   );

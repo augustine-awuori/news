@@ -241,15 +241,29 @@ a {
   align-items: center;
   background-color: var(--color-white);
   border-radius: 20px;
+  justify-content: center;
+}
+
+.widget__time,
+.widget__dates {
   display: flex;
   justify-content: center;
-  padding: 0.7rem;
+}
+
+.widget__time {
+  height: 5rem;
+}
+
+.widget__date {
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.widget__big-element,
+.widget__date {
+  color: var(--color-body-darker);
 }
 
 .widget__big-element {
-  font-size: 3rem;
-}
-
-.widget__dates {
-  /* display: flex; */
+  font-size: 2rem;
 }
