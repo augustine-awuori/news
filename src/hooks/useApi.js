@@ -11,7 +11,7 @@ export default function useApi(apiFunc) {
     setLoading(false);
 
     setError(!response.ok);
-    setData(response.data);
+    setData(response.data?.articles);
     return response;
   };
 
