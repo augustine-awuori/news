@@ -26,6 +26,7 @@ code {
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --color-light: #f8f4f4;
+  --color-white: #fff;
 }
 
 /* Input Group */
@@ -91,6 +92,7 @@ code {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
   padding: 0 5rem;
 }
 
@@ -100,4 +102,154 @@ code {
 
 .navbar .page-controller {
   align-self: center;
+}
+
+/* Cards */
+.card {
+  display: inline-block;
+  background-color: var(--color-white);
+  height: 12rem;
+  margin: 0.4rem;
+  margin-left: 0;
+  max-width: 10rem;
+}
+
+.card,
+.card__header,
+.banner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image {
+  border-radius: var(--color-border);
+  height: 6rem;
+  width: 100%;
+}
+
+.card__body {
+  padding: 0 1rem;
+  display: inline-flex;
+}
+
+.card__title,
+.card__footer {
+  padding: 0 0.5rem;
+}
+
+.card__title {
+  color: var(--color-headings);
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.card__footer {
+  align-items: center;
+  background-color: var(--color-white);
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-radius: inherit;
+}
+
+.card__footer__title {
+  color: var(--color-border);
+}
+
+.card__footer .btn,
+.banner .btn {
+  background-color: var(--color-white);
+  border-color: var(--color-border);
+  border-radius: 5px;
+  color: var(--color-body-darker);
+  cursor: pointer;
+  font-size: 0.5rem;
+  outline: 0;
+  padding: 0.2rem 0.5rem;
+  width: 4rem;
+}
+
+.card__footer .btn:hover,
+.banner .btn:hover {
+  background-color: #1b0760;
+  border: 0;
+  color: var(--color-white);
+  padding: 0.3rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link {
+  border-radius: 5px;
+  color: var(--color-body-darker);
+  padding: 0;
+}
+
+/* Pages */
+.home-page {
+  background-color: var(--color-light);
+  display: flex;
+  height: 200vh;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.page-element {
+  width: 50%;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.banner img {
+  height: 12rem;
+  width: 100%;
+}
+
+.banner .link {
+  bottom: 10px;
+  padding: 1rem;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+.banner__title {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 900;
+  left: 1rem;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+}
+
+.heading {
+  color: var(--color-body-darker);
+}
+
+/* Widget */
+.widget {
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem;
+}
+
+.widget__big-element {
+  font-size: 3rem;
+}
+
+.widget__dates {
+  /* display: flex; */
 }
