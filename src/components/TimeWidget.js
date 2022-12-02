@@ -37,7 +37,7 @@ export default function TimeWidget() {
   useEffect(() => {
     updateTime();
     return () => clearInterval();
-  }, []);
+  }, [seconds]);
 
   const HALF_MINUTE = 30000;
 
