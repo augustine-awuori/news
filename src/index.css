@@ -203,6 +203,30 @@ a {
   width: 50%;
 }
 
+.profile-page .accounts {
+  display: flex;
+}
+
+.profile-page .input {
+  display: block;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+
+.profile {
+  margin: 0 1rem;
+}
+
+.profile img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.profile__name {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
 /* Banner */
 .banner {
   position: relative;
@@ -266,4 +290,39 @@ a {
 
 .widget__big-element {
   font-size: 2rem;
+}
+
+/* Container */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* Profile Page */
+
+h1 {
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+#container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#profilNavn {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#profilNavn:hover {
+  color: grey;
+}
+
+.img {
+  width: 100px;
+  border-radius: 100%;
+  margin: 10px;
 }
