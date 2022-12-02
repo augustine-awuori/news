@@ -15,7 +15,7 @@ export default function HomePage() {
     setNews(data);
   }, []);
 
-  const newsArticles = news.length ? news : data;
+  const newsArticles = news?.length ? news : data;
 
   const handleFavorite = (article) => {
     const items = [...newsArticles];
