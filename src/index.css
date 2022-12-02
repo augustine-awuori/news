@@ -215,6 +215,7 @@ a {
 
 .profile {
   margin: 0 1rem;
+  align-items: center;
 }
 
 .profile img {

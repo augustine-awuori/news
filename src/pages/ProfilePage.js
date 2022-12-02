@@ -6,8 +6,12 @@ export default function ProfilePage() {
   const [name, setName] = useState("");
 
   const addAccount = () => {
-    setAccounts([name, ...accounts]);
+    if (name) setAccounts([name, ...accounts]);
     setName("");
+  };
+
+  const handleDelete = (name) => {
+    setAccounts(accounts.filter((a) => a !== name));
   };
 
   return (
@@ -16,7 +20,7 @@ export default function ProfilePage() {
         <h1>Profiles</h1>
         <section className="accounts">
           {accounts.map((account, index) => (
-            <Profile key={index} name={account} />
+            <Profile key={index} name={account} onClick={handleDelete} />
           ))}
         </section>
         <input
