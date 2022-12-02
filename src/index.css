@@ -194,7 +194,7 @@ a {
 .home-page {
   background-color: var(--color-light);
   display: flex;
-  height: 200vh;
+  height: 1000vh;
   justify-content: space-between;
   padding: 0.2rem;
 }
