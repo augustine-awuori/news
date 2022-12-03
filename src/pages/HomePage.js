@@ -49,7 +49,7 @@ export default function HomePage() {
         <Articles
           newsArticles={newsArticles}
           onAddFavourite={handleFavourite}
-          visible={error}
+          visible={!error}
         />
       </div>
       <div className="page-element">
