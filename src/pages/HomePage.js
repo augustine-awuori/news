@@ -36,7 +36,7 @@ export default function HomePage() {
     newArticle.isFavorite = !newArticle.isFavorite;
     items[index] = newArticle;
 
-    updateFavourites(newArticle.isFavorite);
+    updateFavourites(items[index]);
     setNews(items);
   };
 

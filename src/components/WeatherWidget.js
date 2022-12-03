@@ -13,7 +13,7 @@ export default function WeatherWidget() {
           <p style={{ fontSize: "10px", textAlign: "center" }}>deg</p>
         </span>
         <Icon IconComponent={BiSun} time="6:30 am" title="Sunrise" />
-        <Icon IconComponent={BiMoon} time="7:30 pm" title="Sunrise" />
+        <Icon IconComponent={BiMoon} time="7:30 pm" title="Sunset" />
       </article>
     </Widget>
   );

@@ -20,6 +20,7 @@ export default function FavouritePage() {
     <section className="page">
       {favourites.map((favourite) => (
         <Card
+          key={favourite.title}
           article={favourite}
           isFavorite={favourite.isFavorite}
           onFavoriteAdd={() => removeFavourite(favourite)}
