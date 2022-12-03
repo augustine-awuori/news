@@ -300,6 +300,25 @@ a {
   font-size: 2rem;
 }
 
+.weather-widget {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+.weather-widget__temp {
+  font-size: 3rem;
+}
+
+.widget-icon {
+  align-items: center;
+  display: flex;
+}
+
+.widget-icon__details {
+  margin-left: 20px;
+}
+
 /* Container */
 .container {
   max-width: 1024px;

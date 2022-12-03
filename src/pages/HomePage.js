@@ -5,6 +5,7 @@ import newsApi from "../api/news";
 import TimeWidget from "../components/TimeWidget";
 import useApi from "../hooks/useApi";
 import useFavourites from "../hooks/useFavourites";
+import WeatherWidget from "../components/WeatherWidget";
 
 export default function HomePage() {
   const { data, error, loading, request } = useApi(newsApi.getNews);
@@ -50,6 +51,7 @@ export default function HomePage() {
       </div>
       <div className="page-element">
         <TimeWidget />
+        <WeatherWidget />
       </div>
     </div>
   );
