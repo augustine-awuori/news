@@ -306,8 +306,14 @@ a {
   padding: 0.5rem;
 }
 
+.weather-widget__temp,
+.widget-icon {
+  color: var(--color-body-darker);
+}
+
 .weather-widget__temp {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 0;
 }
 
 .widget-icon {

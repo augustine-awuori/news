@@ -8,9 +8,10 @@ export default function WeatherWidget() {
   return (
     <Widget heading="Vejr">
       <article className="weather-widget">
-        <p className="weather-widget__temp">
-          36 <p style={{ fontSize: "10px", textAlign: "center" }}>deg</p>
-        </p>
+        <span>
+          <p className="weather-widget__temp">26</p>
+          <p style={{ fontSize: "10px", textAlign: "center" }}>deg</p>
+        </span>
         <Icon IconComponent={BiSun} time="6:30 am" title="Sunrise" />
         <Icon IconComponent={BiMoon} time="7:30 pm" title="Sunrise" />
       </article>

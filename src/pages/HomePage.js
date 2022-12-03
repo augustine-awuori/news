@@ -19,9 +19,12 @@ export default function HomePage() {
 
   const newsArticles = news?.length ? news : data;
 
-  const addToFavourites = (article) => {
+  const updateFavourites = (article) => {
     if (article.isFavorite) setFavourites([article, ...favourites]);
-    else setFavourites(favourites.filter((a) => a !== article));
+    else
+      setFavourites(
+        favourites.filter((a) => a.urlToImage !== article.urlToImage)
+      );
   };
 
   const handleFavourite = (article) => {
@@ -33,7 +36,7 @@ export default function HomePage() {
     newArticle.isFavorite = !newArticle.isFavorite;
     items[index] = newArticle;
 
-    addToFavourites(newArticle.isFavorite);
+    updateFavourites(newArticle.isFavorite);
     setNews(items);
   };
 
