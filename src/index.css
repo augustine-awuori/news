@@ -191,12 +191,19 @@ a {
 }
 
 /* Pages */
-.home-page {
+.page {
   background-color: var(--color-light);
-  display: flex;
   height: 1000vh;
-  justify-content: space-between;
   padding: 0.2rem;
+}
+
+.home-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favourite-page {
+  display: flex;
 }
 
 .page-element {
@@ -326,4 +333,12 @@ h1 {
   width: 100px;
   border-radius: 100%;
   margin: 10px;
+}
+
+/* Badge */
+.badge {
+  background-color: var(--color-headings);
+  border-radius: 100%;
+  color: var(--color-white);
+  padding: 0.25rem;
 }

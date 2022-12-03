@@ -15,7 +15,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="home-page profile-page">
+    <div className="page profile-page">
       <body>
         <h1>Profiles</h1>
         <section className="accounts">
